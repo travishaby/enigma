@@ -10,10 +10,10 @@ class Encryptor
 
   def decrypt(input, rotation)
     letters = input.chars
-    ciphered = letters.collect do |char|
+    deciphered = letters.collect do |char|
         cipher(-rotation)[char]
     end
-    ciphered.join
+    deciphered.join
   end
 
   def cipher(rotation)
@@ -34,10 +34,3 @@ class Encryptor
   end
 
 end
-
-# encryptor = Encryptor.new
-# x = gets.to_i
-# puts encryptor.encrypt('hellotyler', x)
-# t = gets
-# y = 91 - x
-# puts encryptor.decrypt(t, y)
