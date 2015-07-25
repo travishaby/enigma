@@ -7,22 +7,8 @@ class Rotation
     kg.generate_key[start..stop]
   end
 
-  def rot_a
-    rotation_parser(0, 1).to_i
+  def rotation(number1, number2)
+    rotation_parser(number1, number2).to_i
   end
-
-  def rot_b
-    rotation_parser(1, 2).to_i
-  end
-
-  def rot_c
-    rotation_parser(2, 3).to_i
-  end
-
-  def rot_d
-    rotation_parser(3, 4).to_i
-  end
-
-
 
 end
