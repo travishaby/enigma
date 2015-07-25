@@ -34,10 +34,3 @@ class Encryptor
   end
 
 end
-
-# encryptor = Encryptor.new
-# x = gets.to_i
-# puts encryptor.encrypt('hellotyler', x)
-# t = gets
-# y = 91 - x
-# puts encryptor.decrypt(t, y)
