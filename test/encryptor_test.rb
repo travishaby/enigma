@@ -2,6 +2,8 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/encryptor'
+require './test/offset_test'
+
 
 class EncryptorTest < Minitest::Test
 
@@ -50,8 +52,11 @@ class EncryptorTest < Minitest::Test
   end
 
   def test_that_dtws_does_its_shit
+    skip
     e = Encryptor.new
     assert_equal "grasgarsegeg", e.do_the_whole_shabang(["abcd", "efgh", "ijkl", "mnop"])
   end
+
+
 
 end

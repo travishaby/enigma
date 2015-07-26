@@ -5,8 +5,8 @@ class KeyGenerator
     t = t.strftime("%H%M%S")
   end
 
-  def generate_key
-    input_time[1..5]
+  def generate_key(key = input_time[0..4])
+    key
   end
 
   def input_date

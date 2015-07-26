@@ -2,6 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/offset'
+require './test/rotation_test'
 
 
 class OffsetTest < Minitest::Test

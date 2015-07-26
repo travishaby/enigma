@@ -3,6 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/rotation'
 require './lib/key_generator'
+require './test/key_generator_test'
 
 class RotationTest < Minitest::Test
 

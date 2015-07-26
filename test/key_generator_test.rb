@@ -18,7 +18,12 @@ class KeyGeneratorTest < Minitest::Test
   def test_that_last_five_digits_of_time_are_output
     kg = KeyGenerator.new
     time_key = kg.input_time
-    assert_equal kg.generate_key, time_key[1..5]
+    assert_equal kg.generate_key, time_key[0..4]
+  end
+
+  def test_that_you_can_pass_in_a_custom_key
+    kg = KeyGenerator.new
+    assert_equal 12345, kg.generate_key(12345)
   end
 
   def test_that_date_is_created

@@ -1,0 +1,27 @@
+gem 'minitest'
+require 'minitest/autorun'
+require 'minitest/pride'
+require './lib/decryptor'
+require './test/encryptor_test'
+require 'pry'
+
+class DecryptorTest < Minitest::Test
+
+  def test_it_exits
+    assert Decryptor
+  end
+
+  def test_dtws_negative_does_its_thang
+    skip
+    d = Decryptor.new
+    assert_equal "notgonnabethesame", d.do_the_whole_shabang_but_negative(["abcd", "efgh"])
+  end
+
+  def test_encryption_and_decryption
+    d = Decryptor.new
+    encrypted = d.encryptor.do_the_whole_shabang(["abcd", "efgh"])
+    assert_equal "abcdefgh", d.decrypt_everythang(encrypted.scan(/.{1,4}/))
+    #sorry im not sorry for using a regex
+  end
+
+end
