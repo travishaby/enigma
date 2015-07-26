@@ -1,12 +1,14 @@
 class KeyGenerator
 
+  attr_accessor :key
+
   def input_time
     t = Time.new
     t = t.strftime("%H%M%S")
   end
 
   def generate_key(key = input_time[0..4])
-    key
+    @key = key
   end
 
   def input_date

@@ -2,6 +2,8 @@ require './lib/key_generator'
 
 class Offset
 
+  attr_accessor :key
+
   def offset_parser(number)
     kg = KeyGenerator.new
     kg.generate_offset[number].to_i

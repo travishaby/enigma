@@ -2,6 +2,8 @@ require './lib/key_generator'
 
 class Rotation
 
+  attr_accessor :key
+
   def rotation_parser(start, stop)
     kg = KeyGenerator.new
     kg.generate_key[start..stop]
