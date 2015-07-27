@@ -1,9 +1,8 @@
 class Cracker
 
-  attr_accessor :key
-
-  def initialize(key = nil)
+  def initialize(key = nil, date = nil)
     @key = key
+    @date = date
   end
 
   def crack(message)
@@ -21,8 +20,8 @@ class Cracker
     counter
   end
 
-  def method_name
-
+  def last_seven_chars(message)
+    message[-7..-1]
   end
 
 end

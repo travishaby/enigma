@@ -1,7 +1,8 @@
 class KeyGenerator
 
-  def initialize(key = nil)
+  def initialize(key = nil, date = nil)
     @key = key
+    @date = date
   end
 
   def input_time
@@ -9,7 +10,7 @@ class KeyGenerator
     t = t.strftime("%H%M%S")
   end
 
-  def generate_key(key = nil)
+  def generate_key
     if @key == nil
       @key = input_time[0..4]
     else
@@ -24,7 +25,10 @@ class KeyGenerator
   end
 
   def generate_date_squared
-    input_date.to_i**2
+    if @date == nil
+      @date = input_date
+    end
+    @date.to_i**2
   end
 
   def generate_offset

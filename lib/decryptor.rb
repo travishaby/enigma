@@ -2,12 +2,13 @@ require './lib/encryptor'
 
 class Decryptor
 
-  def initialize(key = nil)
+  def initialize(key = nil, date = nil)
     @key = key
+    @date = date
   end
 
   def cipher
-    c = Cipher.new(@key)
+    c = Cipher.new(@key, @date)
   end
 
   def decrypt(character, final_rotation)
