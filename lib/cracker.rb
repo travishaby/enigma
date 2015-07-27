@@ -1,5 +1,11 @@
 class Cracker
 
+  attr_accessor :key
+
+  def initialize(key = nil)
+    @key = key
+  end
+
   def crack(message)
 
   end

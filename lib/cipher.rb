@@ -3,9 +3,13 @@ require './lib/offset'
 
 class Cipher
 
+  def initialize(key = nil)
+    @key = key
+  end
+
   def rotation_plus_offset(index)
-    r = Rotation.new
-    o = Offset.new
+    r = Rotation.new(@key)
+    o = Offset.new(@key)
     both = r.rotation(index, index + 1) + o.offset(index)
   end
 

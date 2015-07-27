@@ -1,14 +1,21 @@
 class KeyGenerator
 
-  attr_accessor :key
+  def initialize(key = nil)
+    @key = key
+  end
 
   def input_time
     t = Time.new
     t = t.strftime("%H%M%S")
   end
 
-  def generate_key(key = input_time[0..4])
-    @key = key
+  def generate_key(key = nil)
+    if @key == nil
+      @key = input_time[0..4]
+    else
+      @key
+    end
+    @key
   end
 
   def input_date

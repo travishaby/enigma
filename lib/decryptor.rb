@@ -2,10 +2,12 @@ require './lib/encryptor'
 
 class Decryptor
 
-  attr_accessor :key
+  def initialize(key = nil)
+    @key = key
+  end
 
   def cipher
-    c = Cipher.new
+    c = Cipher.new(@key)
   end
 
   def decrypt(character, final_rotation)
@@ -22,10 +24,6 @@ class Decryptor
       end
     end
     placeholder.join
-  end
-
-  def pass_in_key_manually(key)
-    @key = key
   end
 
 end

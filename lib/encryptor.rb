@@ -4,10 +4,12 @@ require './lib/cipher'
 
 class Encryptor
 
-  attr_accessor :key
+  def initialize(key = nil)
+    @key = key
+  end
 
   def cipher
-    c = Cipher.new
+    c = Cipher.new(@key)
   end
 
   def encrypt(character, final_rotation)

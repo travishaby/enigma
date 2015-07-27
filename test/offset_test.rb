@@ -12,28 +12,28 @@ class OffsetTest < Minitest::Test
   end
 
   def test_offset_comes_from_key_generator
-    o = Offset.new
-    kg = KeyGenerator.new
+    o = Offset.new("00000")
+    kg = KeyGenerator.new("00000")
     assert_equal kg.generate_offset[1].to_i, o.offset_parser(1)
   end
 
   def test_offset_a
-      o = Offset.new
+      o = Offset.new("00000")
       assert_equal o.offset_parser(0), o.offset(0)
   end
 
   def test_offset_b
-      o = Offset.new
+      o = Offset.new("00000")
       assert_equal o.offset_parser(1), o.offset(1)
   end
 
   def test_offset_c
-      o = Offset.new
+      o = Offset.new("00000")
       assert_equal o.offset_parser(2), o.offset(2)
   end
 
   def test_offset_d
-      o = Offset.new
+      o = Offset.new("00000")
       assert_equal o.offset_parser(3), o.offset(3)
   end
 
