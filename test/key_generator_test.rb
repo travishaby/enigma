@@ -32,16 +32,4 @@ class KeyGeneratorTest < Minitest::Test
     assert_equal kg.input_date, t.strftime("%m%d%y")
   end
 
-  def test_that_input_date_is_squared
-    kg = KeyGenerator.new
-    t = Time.new
-    t = t.strftime("%m%d%y")
-    assert_equal (kg.input_date).to_i**2, kg.generate_date_squared
-  end
-
-  def test_generate_offset_give_last_four_numbers_of_squared
-    kg = KeyGenerator.new
-    assert_equal kg.generate_date_squared.to_s[-4..-1], kg.generate_offset
-  end
-
 end

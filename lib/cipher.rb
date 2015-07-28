@@ -3,8 +3,9 @@ require './lib/offset'
 
 class Cipher
 
-  def initialize(key = nil)
+  def initialize(key = nil, date = nil)
     @key = key
+    @date = date
   end
 
   def rotation_plus_offset(index)
@@ -18,6 +19,20 @@ class Cipher
     rotated_chars = characters.rotate(rotation)
     pairs = characters.zip(rotated_chars)
     key = Hash[pairs]
+  end
+
+  def date
+    key_generator = KeyGenerator.new
+    key_generator.input_date
+  end
+
+  def generate_offsets
+    date_squared = date.to_i**2
+    date_squared.to_s[-4..-1]
+  end
+
+  def rotate(text)
+
   end
 
 end
