@@ -5,34 +5,21 @@ class KeyGenerator
     @date = date
   end
 
-  def input_time
-    t = Time.new
-    t = t.strftime("%H%M%S")
-  end
-
-  def generate_key
-    if @key == nil
-      @key = input_time[0..4]
-    else
+  def key
+    if @key
       @key
+    else
+      Time.new.strftime("%H%M%S")[0..4]
     end
-    @key
   end
 
-  def input_date
-    t = Time.new
-    t = t.strftime("%m%d%y")
-  end
-
-  def generate_date_squared
-    if @date == nil
-      @date = input_date
+  def offset
+    if @date
+      date = @date
+    else
+      date = Time.new.strftime("%m%d%y")
     end
-    @date.to_i**2
+    date_squared = date.to_i**2
+    date_squared.to_s[-4..-1]
   end
-
-  def generate_offset
-    generate_date_squared.to_s[-4..-1]
-  end
-
 end
