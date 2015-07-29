@@ -1,6 +1,6 @@
 class Cracker
 
-  def initialize(key = nil, date = nil)
+  def initialize(text = "abcd")
     @key = key
     @date = date
   end
@@ -20,8 +20,8 @@ class Cracker
     counter
   end
 
-  def last_seven_chars(message)
-    message[-7..-1]
+  def find_modulo_four(message)
+    remainder = message % 4
   end
 
   def crack(message)
@@ -29,5 +29,15 @@ class Cracker
       decrypt(message, attempt)
     end
   end
-  
+
+end
+
+if __FILE__ == $0
+  handle = File.open(ARGV[0], "r")
+  input = handle.read
+  handle.close
+  encrypted = Encrypt.new(input, "00001", "100000").encrypt
+  writer = File.open(ARGV[1], "w")
+  writer.write(encrypted)
+  writer.close
 end

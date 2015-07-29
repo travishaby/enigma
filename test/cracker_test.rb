@@ -7,10 +7,6 @@ require 'pry'
 
 class CrackerTest < Minitest::Test
 
-  def test_it_exits
-    assert Cracker
-  end
-
   def test_find_distance_between_known_character_at_start_and_encrypted_character
     c = Cracker.new
     assert_equal 21, c.find_distance("a", "v")

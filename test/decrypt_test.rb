@@ -1,28 +1,29 @@
+gem 'simplecov', :require => false, :group => :test
+require 'simplecov'
+SimpleCov.start
+
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/decryptor'
+require './lib/decrypt'
+require './test/cipher_test'
+require './test/encrypt_test'
 require 'pry'
 
-class DecryptorTest < Minitest::Test
 
-  def test_dtws_negative_does_its_thang
-    skip
-    d = Decryptor.new
-    assert_equal "notgonnabethesame", d.do_the_whole_shabang_but_negative(["abcd", "efgh"])
+class DecryptTest < Minitest::Test
+  include TodayValues
+
+  def test_decrypt_text
+    decryptor = Decrypt.new("abce", '00001', '100000')
+    assert_equal "abcd", decryptor.decrypt
   end
 
-  def test_encryption_and_decryption
-    d = Decryptor.new
-    e = Encryptor.new
-    encrypted = e.do_the_whole_shabang(["abcd", "efgh"])
-    assert_equal "abcdefgh", d.decrypt_everythang(encrypted.scan(/.{1,4}/))
-    #sorry im not sorry for using a regex
-  end
-
-  def test_decryption_while_passing_specified_key
-    d = Decryptor.new("00000")
-    assert_equal "..a ddec", d.decrypt_everythang(["abcd", "efgh"])
+  def test_encrypt_text_with_generated_date
+    manual_decrypt = Decrypt.new("abcd",
+    today_key, today_date).decrypt
+    default_decrypt = Decrypt.new("abcd", today_key).decrypt
+    assert_equal manual_decrypt, default_decrypt
   end
 
 end
