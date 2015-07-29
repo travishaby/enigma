@@ -28,14 +28,6 @@ end
 #     ciphered = cipher.cipher(final_rotation)[character]
 #   end
 #
-#   def do_the_whole_shabang(incoming_strings)
-#     placeholder = []
-#     incoming_strings.each do |string|
-#       4.times do |num|
-#         placeholder << encrypt(string[num], cipher.rotation_plus_offset(num))
-#       end
-#     end
-#     placeholder.join
-#   end
+#   
 #
 # end
