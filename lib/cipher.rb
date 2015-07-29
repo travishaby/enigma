@@ -1,25 +1,25 @@
 require './lib/rotation'
-require './lib/offset'
 require 'pry'
 
 class Cipher
-  def initialize(key = nil, date = nil)
+
+  def initialize(key = nil, date = nil, direction = "+")
     @key = key
     @date = date
     @rotation = Rotation.new(key, date)
+    @direction = direction
   end
 
-  def encrypt(text)
+  def __crypt(text)
     text.scan(/.{1,4}/).map do |fragment|
       rotate(fragment)
     end.join
   end
 
-  private
-
   def rotate(string)
     string.chars.each_with_index.map do |character, index|
-      rotated_chars_hash = rotate_chars(@rotation.final_rotation(index))
+      rotate_value = (@direction + @rotation.final_rotation(index).to_s).to_i
+      rotated_chars_hash = rotate_chars(rotate_value)
       rotated_chars_hash[character]
     end
   end
@@ -32,20 +32,3 @@ class Cipher
   end
 
 end
-# class Cipher
-#
-#   def initialize(key = nil, date = nil)
-#     @key = key
-#     @date = date
-#   end
-#
-#   def rotation_plus_offset(index)
-#     r = Rotation.new(@key)
-#     both = r.rotation(index, index + 1) + offset(index)
-#   end
-#
-#   def rotate(text)
-#
-#   end
-#
-# end

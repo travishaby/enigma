@@ -2,7 +2,6 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/decryptor'
-require './test/encryptor_test'
 require './lib/cracker'
 require 'pry'
 

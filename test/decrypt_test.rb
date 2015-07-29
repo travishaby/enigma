@@ -2,14 +2,9 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/decryptor'
-require './test/encryptor_test'
 require 'pry'
 
 class DecryptorTest < Minitest::Test
-
-  def test_it_exits
-    assert Decryptor
-  end
 
   def test_dtws_negative_does_its_thang
     skip

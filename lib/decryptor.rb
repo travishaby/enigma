@@ -1,4 +1,4 @@
-require './lib/encryptor'
+require './lib/cipher'
 
 class Decryptor
 

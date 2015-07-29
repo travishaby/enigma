@@ -24,4 +24,10 @@ class Cracker
     message[-7..-1]
   end
 
+  def crack(message)
+    supported_characters.count.times.collect do |attempt|
+      decrypt(message, attempt)
+    end
+  end
+  
 end

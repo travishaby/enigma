@@ -2,8 +2,6 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/encryptor'
-require './test/offset_test'
-require './test/cipher_test'
 
 class EncryptorTest < Minitest::Test
 
@@ -22,4 +20,5 @@ class EncryptorTest < Minitest::Test
     e = Encryptor.new
     assert_equal "grasgarsegeg", e.do_the_whole_shabang(["abcd", "efgh", "ijkl", "mnop"])
   end
+  
 end
