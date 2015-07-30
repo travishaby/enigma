@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-30T07:56:49-06:00">2015-07-30T07:56:49-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-30T08:18:04-06:00">2015-07-30T08:18:04-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.56%</span></span>
+    (<span class="covered_percent"><span class="yellow">88.43%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.47
+         7.31
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>12</b> files in total.
-    <b>236</b> relevant lines. 
-    <span class="green"><b>209</b> lines covered</span> and
-    <span class="red"><b>27</b> lines missed </span>
+    <b>242</b> relevant lines. 
+    <span class="green"><b>214</b> lines covered</span> and
+    <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#66b2307127a7664621b62ef7ff8f1a9f6402938d" class="src_link" title="lib/crack.rb">lib/crack.rb</a></td>
-        <td class="red strong">80.0 %</td>
-        <td>80</td>
-        <td>50</td>
-        <td>40</td>
-        <td>10</td>
-        <td>15.3</td>
+        <td class="yellow strong">80.36 %</td>
+        <td>90</td>
+        <td>56</td>
+        <td>45</td>
+        <td>11</td>
+        <td>13.8</td>
       </tr>
       
       <tr>
@@ -411,11 +411,11 @@
         <div class="source_table" id="66b2307127a7664621b62ef7ff8f1a9f6402938d">
   <div class="header">
     <h3>lib/crack.rb</h3>
-    <h4><span class="red">80.0 %</span> covered</h4>
+    <h4><span class="yellow">80.36 %</span> covered</h4>
     <div>
-      <b>50</b> relevant lines. 
-      <span class="green"><b>40</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <b>56</b> relevant lines. 
+      <span class="green"><b>45</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
@@ -524,8 +524,8 @@
           <code class="ruby">  def remainder</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="18">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="18">
+          <span class="hits">10</span>
           
           <code class="ruby">    @text.length % 4</code>
         </li>
@@ -545,358 +545,418 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  def remove_remainder</code>
+          <code class="ruby">  def save_remainder</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
-          <code class="ruby">    remainder.times {</code>
+          <code class="ruby">    if remainder == 0</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="23">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          <code class="ruby">                      @text       = @text.chop</code>
+          <code class="ruby">      &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="24">
-          <span class="hits">8</span>
+        <li class="never" data-hits="" data-linenumber="24">
           
-          <code class="ruby">                      @end_string = @end_string.chop</code>
+          
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="missed" data-hits="0" data-linenumber="25">
           
           
-          <code class="ruby">                    }</code>
+          <code class="ruby">      save_extra = @text[-remainder..-1]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    save_extra</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">  def find_rotation</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="29">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    @rot_a = find_distance(@end_string[-4], @text[-4])</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="30">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    @rot_b = find_distance(@end_string[-3], @text[-3])</code>
+          <code class="ruby">  def remove_remainder</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="31">
           <span class="hits">5</span>
           
-          <code class="ruby">    @rot_c = find_distance(@end_string[-2], @text[-2])</code>
+          <code class="ruby">    remainder.times {</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="32">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="32">
+          <span class="hits">8</span>
           
-          <code class="ruby">    @rot_d = find_distance(@end_string[-1], @text[-1])</code>
+          <code class="ruby">                    @text       = @text.chop</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="covered" data-hits="8" data-linenumber="33">
+          <span class="hits">8</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">                    @end_string = @end_string.chop</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">                    }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="35">
           
-          <code class="ruby">  def decrypt</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">    @text.scan(/.{1,4}/).map do |fragment|</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def find_rotation</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="38">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @rot_a = find_distance(@end_string[-4], @text[-4])</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="39">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @rot_b = find_distance(@end_string[-3], @text[-3])</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="40">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @rot_c = find_distance(@end_string[-2], @text[-2])</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="41">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @rot_d = find_distance(@end_string[-1], @text[-1])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def decrypt</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @text = @text.scan(/.{1,4}/).map do |fragment|</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="46">
           <span class="hits">9</span>
           
           <code class="ruby">      rotate(fragment)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="47">
+          
           
           <code class="ruby">    end.join</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @text += save_remainder</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
           <code class="ruby">  def rotate(string)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="42">
+        <li class="covered" data-hits="9" data-linenumber="52">
           <span class="hits">9</span>
           
           <code class="ruby">    rotations = [@rot_a, @rot_b, @rot_c, @rot_d]</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="43">
+        <li class="covered" data-hits="9" data-linenumber="53">
           <span class="hits">9</span>
           
           <code class="ruby">    string.chars.each_with_index.map do |character, index|</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="44">
+        <li class="covered" data-hits="36" data-linenumber="54">
           <span class="hits">36</span>
           
           <code class="ruby">      rotated_chars_hash = rotate_chars(-rotations[index])</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="45">
+        <li class="covered" data-hits="36" data-linenumber="55">
           <span class="hits">36</span>
           
           <code class="ruby">      rotated_chars_hash[character]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
           <code class="ruby">  def rotate_chars(rotation)</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="50">
+        <li class="covered" data-hits="36" data-linenumber="60">
           <span class="hits">36</span>
           
           <code class="ruby">    characters = (&quot;a&quot;..&quot;z&quot;).to_a + (&quot;0&quot;..&quot;9&quot;).to_a + (&quot;, .&quot;).chars</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="51">
+        <li class="covered" data-hits="36" data-linenumber="61">
           <span class="hits">36</span>
           
           <code class="ruby">    rotated_chars = characters.rotate(rotation)</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="52">
+        <li class="covered" data-hits="36" data-linenumber="62">
           <span class="hits">36</span>
           
           <code class="ruby">    pairs = characters.zip(rotated_chars)</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="53">
+        <li class="covered" data-hits="36" data-linenumber="63">
           <span class="hits">36</span>
           
           <code class="ruby">    key = Hash[pairs]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def find_distance(known_char, encrypted_char)</code>
-        </li>
-      
-        <li class="covered" data-hits="24" data-linenumber="57">
-          <span class="hits">24</span>
-          
-          <code class="ruby">    characters = (&quot;a&quot;..&quot;z&quot;).to_a + (&quot;0&quot;..&quot;9&quot;).to_a + (&quot;, .&quot;).chars</code>
-        </li>
-      
-        <li class="covered" data-hits="24" data-linenumber="58">
-          <span class="hits">24</span>
-          
-          <code class="ruby">    start = characters.index(known_char)</code>
-        </li>
-      
-        <li class="covered" data-hits="24" data-linenumber="59">
-          <span class="hits">24</span>
-          
-          <code class="ruby">    counter = 0</code>
-        </li>
-      
-        <li class="covered" data-hits="24" data-linenumber="60">
-          <span class="hits">24</span>
-          
-          <code class="ruby">    until characters[start] == encrypted_char</code>
-        </li>
-      
-        <li class="covered" data-hits="145" data-linenumber="61">
-          <span class="hits">145</span>
-          
-          <code class="ruby">      characters = characters.rotate</code>
-        </li>
-      
-        <li class="covered" data-hits="145" data-linenumber="62">
-          <span class="hits">145</span>
-          
-          <code class="ruby">      counter += 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="24" data-linenumber="64">
-          <span class="hits">24</span>
-          
-          <code class="ruby">    counter</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def find_distance(known_char, encrypted_char)</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="67">
+          <span class="hits">24</span>
+          
+          <code class="ruby">    characters = (&quot;a&quot;..&quot;z&quot;).to_a + (&quot;0&quot;..&quot;9&quot;).to_a + (&quot;, .&quot;).chars</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="68">
+          <span class="hits">24</span>
+          
+          <code class="ruby">    start = characters.index(known_char)</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="69">
+          <span class="hits">24</span>
+          
+          <code class="ruby">    counter = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="70">
+          <span class="hits">24</span>
+          
+          <code class="ruby">    until characters[start] == encrypted_char</code>
+        </li>
+      
+        <li class="covered" data-hits="145" data-linenumber="71">
+          <span class="hits">145</span>
+          
+          <code class="ruby">      characters = characters.rotate</code>
+        </li>
+      
+        <li class="covered" data-hits="145" data-linenumber="72">
+          <span class="hits">145</span>
+          
+          <code class="ruby">      counter += 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="74">
+          <span class="hits">24</span>
+          
+          <code class="ruby">    counter</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="69">
+        <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
           <code class="ruby">if __FILE__ == $0</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="70">
+        <li class="missed" data-hits="0" data-linenumber="80">
           
           
           <code class="ruby">  handle = File.open(ARGV[0], &quot;r&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="71">
+        <li class="missed" data-hits="0" data-linenumber="81">
           
           
           <code class="ruby">  input = handle.read</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="72">
+        <li class="missed" data-hits="0" data-linenumber="82">
           
           
           <code class="ruby">  handle.close</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="73">
+        <li class="missed" data-hits="0" data-linenumber="83">
           
           
           <code class="ruby">  cracked = Cracker.new(input, ARGV[2])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="74">
+        <li class="missed" data-hits="0" data-linenumber="84">
           
           
           <code class="ruby">  cracked.remove_remainder</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="75">
+        <li class="missed" data-hits="0" data-linenumber="85">
           
           
           <code class="ruby">  cracked.find_rotation</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="76">
+        <li class="missed" data-hits="0" data-linenumber="86">
           
           
           <code class="ruby">  cracked = cracked.decrypt</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="77">
+        <li class="missed" data-hits="0" data-linenumber="87">
           
           
           <code class="ruby">  writer = File.open(ARGV[1], &quot;w&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="78">
+        <li class="missed" data-hits="0" data-linenumber="88">
           
           
           <code class="ruby">  writer.write(cracked)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="79">
+        <li class="missed" data-hits="0" data-linenumber="89">
           
           
           <code class="ruby">  writer.close</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">end</code>

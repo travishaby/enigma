@@ -107,7 +107,7 @@ class CrackerTest < Minitest::Test
     cracker = Cracker.new("hey.i wpndes if.thit wiml wprk.a.ene..")
     cracker.remove_remainder
     cracker.find_rotation
-    assert_equal "hey i wonder if this will work...end", cracker.decrypt
+    assert_equal "hey i wonder if this will work...end..", cracker.decrypt
   end
 
 end

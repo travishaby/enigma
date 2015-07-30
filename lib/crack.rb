@@ -18,6 +18,15 @@ class Cracker
     @text.length % 4
   end
 
+  def save_remainder
+    if remainder == 0
+      ""
+    else
+      save_extra = @text[-remainder..-1]
+    end
+    save_extra
+  end
+
   def remove_remainder
     remainder.times {
                     @text       = @text.chop
@@ -33,9 +42,10 @@ class Cracker
   end
 
   def decrypt
-    @text.scan(/.{1,4}/).map do |fragment|
+    @text = @text.scan(/.{1,4}/).map do |fragment|
       rotate(fragment)
     end.join
+    @text += save_remainder
   end
 
   def rotate(string)
