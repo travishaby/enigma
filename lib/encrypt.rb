@@ -19,7 +19,7 @@ if __FILE__ == $0
   handle = File.open(ARGV[0], "r")
   input = handle.read
   handle.close
-  encrypted = Encrypt.new(input, "00001", "100000").encrypt
+  encrypted = Encrypt.new(input).encrypt
   writer = File.open(ARGV[1], "w")
   writer.write(encrypted)
   writer.close

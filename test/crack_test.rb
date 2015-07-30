@@ -44,7 +44,7 @@ class CrackerTest < Minitest::Test
     cracker.find_rotation
     assert_equal 21, cracker.rot_d
   end
-  
+
   def test_remainder_of_zero
     cracker = Cracker.new("nnaj")
     assert_equal 0, cracker.remainder
@@ -103,13 +103,12 @@ class CrackerTest < Minitest::Test
     assert_equal 0, cracker.find_distance("3", "3")
   end
 
-
-  #
-  # def test_cracked_key_equals_expected_value
-  #   cracker = Cracker.new("nnaj")
-  #   cracker.find_rotation
-  #   assert_equal "01010", cracker.cracked_key
-  # end
+  def test_cracked_key_equals_expected_value
+    cracker = Cracker.new("hey.i wpndes if.thit wiml wprk.a.ene..")
+    cracker.remove_remainder
+    cracker.find_rotation
+    assert_equal "hey i wonder if this will work...end", cracker.decrypt
+  end
 
 
 
