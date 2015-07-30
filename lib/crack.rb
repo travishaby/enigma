@@ -20,8 +20,8 @@ class Cracker
 
   def remove_remainder
     remainder.times {
-                      @text       = @text.chop
-                      @end_string = @end_string.chop
+                    @text       = @text.chop
+                    @end_string = @end_string.chop
                     }
   end
 

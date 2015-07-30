@@ -110,10 +110,4 @@ class CrackerTest < Minitest::Test
     assert_equal "hey i wonder if this will work...end", cracker.decrypt
   end
 
-
-
-  def test_case_name
-
-  end
-
 end
