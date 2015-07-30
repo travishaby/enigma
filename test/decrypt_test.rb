@@ -1,12 +1,7 @@
-gem 'simplecov', :require => false, :group => :test
-require 'simplecov'
-SimpleCov.start
-
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/decrypt'
-require './test/cipher_test'
 require './test/encrypt_test'
 require 'pry'
 
@@ -19,7 +14,7 @@ class DecryptTest < Minitest::Test
     assert_equal "abcd", decryptor.decrypt
   end
 
-  def test_encrypt_text_with_generated_date
+  def test_decrypt_text_with_generated_date
     manual_decrypt = Decrypt.new("abcd",
     today_key, today_date).decrypt
     default_decrypt = Decrypt.new("abcd", today_key).decrypt

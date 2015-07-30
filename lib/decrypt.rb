@@ -12,7 +12,7 @@ class Decrypt
     cipher = Cipher.new(@key, @date, "-")
     cipher.__crypt(@text)
   end
-  
+
 end
 
 if __FILE__ == $0

@@ -7,7 +7,6 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/encrypt'
 require './test/cipher_test'
-require './test/decrypt_test'
 
 class EncryptTest < Minitest::Test
   include TodayValues
