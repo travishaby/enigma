@@ -1,0 +1,75 @@
+/* Links
+  ========================================
+*/
+
+a:hover {
+  color: #6fafff;
+}
+a {
+  color: #000000;
+}
+
+/* Typography
+  ========================================
+*/
+
+h1, h3, h4, h5, p {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+body {
+  font: 300 16px/22px "Open Sans", "Calibri";
+  background-image: url("background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  font: 300 16px/22px "Open Sans", "Calibri";
+  color: black;
+  font-size: 20px;
+  margin-top: 20px
+}
+
+header {
+  font: 300 16px/22px "Open Sans", "Verdana";
+  color: black;
+  font-size: 16px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 80%;
+}
+
+.top {
+  padding: 22px 80px 30px 80px;
+}
+
+.button {
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0;
+}
+
+.button:hover {
+  border-radius: 10px;
+  display: inline-block;
+  background: #ffffff;
+  background: radial-gradient(#ffffff #afffff);
+  margin: 0;
+}
+
+.top-button {
+  border: 1px solid #000000;
+  padding: 10px 30px ;
+}
